@@ -1,10 +1,25 @@
 #include<stdio.h>
-int main()
+main()
 {
-    int a,b,c,sum;
-    printf("enter the value of a,b,c");
-    scanf("%d%d%d",&a,&b,&c);
-    sum=a+b+c;
-    printf("sum=%d",sum);
-    getch ();
+    int num,rem,no,binary=0,i=1;
+    printf("Enter a decimal number=");
+    scanf("%d",&no);
+
+
+    while(no!=0)
+    {
+        rem=no%2;
+        no=no/2;
+        binary=binary+(rem*i);
+        i=i*10;
+    }
+    printf("Equivalent number is %d",binary);
+    getch();
 }
+
+
+
+
+
+
+
